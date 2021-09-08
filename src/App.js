@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./css/App.scss";
+import {
+  Link,
+  Redirect,
+  Switch,
+  Route,
+  BrowserRouter as Router,
+} from "react-router-dom";
+import Sidebar from "./component/Sidebar";
+import Topbar from "./component/Topbar";
+import AddUser from "./component/AddUser";
+import UserList from "./component/UserList";
+import Weather from "./component/Weather";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="main-container">
+        <div className="sidebar">
+          <Sidebar />
+        </div>
+        <div className="topbar">
+          <Topbar />
+          <Route exact path="/" component={AddUser} />
+          <Route exact path="/user-list" component={UserList} />
+          <Route exact path="/weather" component={Weather} />
+        </div>
+      </div>
+    </Router>
   );
 }
 

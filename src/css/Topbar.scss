@@ -1,0 +1,27 @@
+.topbar-container {
+  height: 103px;
+  background-color: #fff;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+  padding-right: 20px;
+  justify-content: space-between;
+  .current-date {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+  }
+  .user_name {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #646464;
+    margin-right: 20px;
+  }
+}
